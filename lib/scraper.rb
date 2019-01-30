@@ -4,6 +4,7 @@ require 'pry'
 class Scraper
 
   def self.scrape_index_page(index_url)
+<<<<<<< HEAD
     students = []
     html = open(index_url)
     list = Nokogiri::HTML(html)
@@ -32,11 +33,22 @@ class Scraper
     else
       student_profile[:blog] = social_media.attribute("href").value
     end
+=======
+    # html = open(index_url)
+    # index = Nokogiri::HTML(html)
+  end
+
+  def self.scrape_profile_page(profile_url)
+
+>>>>>>> fbd5ae97cc5b486c9df23713859791c678c133fb
   end
   student_profile[:profile_quote] = profile.css("div.main-wrapper.profile .vitals-text-container .profile-quote").text
   student_profile[:bio] = profile.css("div.main-wrapper.profile .description-holder p").text
   student_profile
 
+<<<<<<< HEAD
 
   end
+=======
+>>>>>>> fbd5ae97cc5b486c9df23713859791c678c133fb
 end
